@@ -1,32 +1,209 @@
-.App {
+:root {
+  --lcbo-medium-brown: rgb(196, 160, 119);
+  --lcbo-brown: rgb(82, 44, 27);
+  --lcbo-light-brown: rgb(245, 223, 190);
+  --lcbo-grey: rgb(165, 186, 187);
+}
+
+body {
+  font-family: "Open Sans";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Abril Fatface";
+}
+
+a {
+  color: inherit;
+}
+
+.brown {
+  background: rgb(82, 44, 27);
+}
+
+.medium-brown {
+  background: rgb(196, 160, 119);
+}
+
+.grey {
+  background: rgb(165, 186, 187);
+}
+
+.light-brown {
+  background: rgb(245, 223, 190);
+}
+
+.text-brown {
+  color: rgb(82, 44, 27);
+}
+.text-m-brown {
+  color: rgb(196, 160, 119);
+}
+.text-grey {
+  color: rgb(165, 186, 187);
+}
+.text-s-brown {
+  color: rgb(245, 223, 190);
+}
+
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.header,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.header {
+  padding-bottom: 1rem;
+  border-bottom: 0.05rem solid #e5e5e5;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+
+.footer {
+  padding-top: 1.5rem;
+  color: var(--lcbo-grey);
+  border-top: 0.05rem solid #e5e5e5;
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 80rem;
+  }
+}
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 0.05rem solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 2rem;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+.stores-grid,
+.beer-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.stores-grid .card,
+.beer-grid .card {
+  margin: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.stores-grid .card:hover,
+.beer-grid .card:hover {
+  margin: 10px;
+  box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.beer-grid .card a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+}
+
+.beer-grid .card img {
+  position: relative;
+  width: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.beer-grid .card-body p {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.beer-card,
+.store-card {
+  width: 13rem;
+}
+.beer-info {
+  height: 80vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.beer-image,
+.beer-image-holder {
+  position: relative;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.App-link {
-  color: #61dafb;
+.beer-image-holder {
+  filter: grayscale();
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: bold;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  border-top: 0.15rem solid var(--lcbo-brown);
+  border-bottom: 0.15rem solid var(--lcbo-grey);
+  box-shadow: 0 1rem 2rem rgba(165, 186, 187, 0.5);
+  transition: transform 300ms ease;
+}
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  top: -1%;
+  height: 102%;
+  width: 0.15rem;
+  background: linear-gradient(var(--lcbo-brown), var(--lcbo-grey));
+}
+.button:before {
+  left: 0;
+}
+.button:after {
+  right: 0;
+}
+
+.button:hover {
+  transform: translatey(-0.5rem);
 }
