@@ -1,14 +1,15 @@
 {
-  "main.css": "/beaus/static/css/main.d6335512.chunk.css",
-  "main.js": "/beaus/static/js/main.5fce4b11.chunk.js",
-  "main.js.map": "/beaus/static/js/main.5fce4b11.chunk.js.map",
-  "static/js/1.64de78db.chunk.js": "/beaus/static/js/1.64de78db.chunk.js",
-  "static/js/1.64de78db.chunk.js.map": "/beaus/static/js/1.64de78db.chunk.js.map",
+  "main.css": "/beaus/static/css/main.06589abb.chunk.css",
+  "main.js": "/beaus/static/js/main.6da47ae5.chunk.js",
+  "main.js.map": "/beaus/static/js/main.6da47ae5.chunk.js.map",
+  "static/js/1.38b497a8.chunk.js": "/beaus/static/js/1.38b497a8.chunk.js",
+  "static/js/1.38b497a8.chunk.js.map": "/beaus/static/js/1.38b497a8.chunk.js.map",
   "runtime~main.js": "/beaus/static/js/runtime~main.08d70b0b.js",
   "runtime~main.js.map": "/beaus/static/js/runtime~main.08d70b0b.js.map",
+  "static/css/main.06589abb.chunk.css.map": "/beaus/static/css/main.06589abb.chunk.css.map",
   "static/media/tall.jpg": "/beaus/static/media/tall.e3d0e288.jpg",
-  "static/css/main.d6335512.chunk.css.map": "/beaus/static/css/main.d6335512.chunk.css.map",
+  "static/media/logo.png": "/beaus/static/media/logo.a3eb77be.png",
   "index.html": "/beaus/index.html",
-  "precache-manifest.4e56563deddf1d5e8bafd02272e32120.js": "/beaus/precache-manifest.4e56563deddf1d5e8bafd02272e32120.js",
+  "precache-manifest.b3da723085edfc8b98c132b843e52995.js": "/beaus/precache-manifest.b3da723085edfc8b98c132b843e52995.js",
   "service-worker.js": "/beaus/service-worker.js"
 }
