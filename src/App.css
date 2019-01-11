@@ -101,6 +101,10 @@ body {
   padding: 0.75rem 1.5rem;
   font-size: 1.5rem;
 }
+
+.landing-logo {
+  height: 80%;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 48em) {
   /* Remove the padding we set earlier */
@@ -227,4 +231,8 @@ body {
   z-index: 2;
   width: 100%;
   height: 80vh;
+}
+
+.my-map-pin {
+  width: 10%;
 }

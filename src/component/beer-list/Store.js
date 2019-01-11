@@ -30,7 +30,7 @@ export default function Store(props) {
             <p className="store-address">
               <i className="fas fa-map-marker-alt" /> :{" "}
               <a
-                href={`https://www.google.com/maps/place/${address}?hl=en`}
+                href={`https://www.google.com/maps/dir/${address}?hl=en`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

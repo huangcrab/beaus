@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from "google-maps-react";
-
+import ImgPlaceHolder from "../../assets/tall.jpg";
 import Store from "./Store";
 
 class BeerInfo extends Component {
@@ -38,24 +38,25 @@ class BeerInfo extends Component {
     this.props.value.getStores(this.props.id);
   };
   onShowMapClick = () => {
-    fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${
-        this.props.value.location
-      }&key=AIzaSyAI6yDH5gaOYwcbJorZZ3SNbCXF7IoczZ0`
-    )
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        if (data.results.length !== 0) {
-          this.setState({
-            latitude: data.results[0].geometry.location.lat
-          });
-          this.setState({
-            longitude: data.results[0].geometry.location.lng
-          });
-        } else {
-        }
-      });
+    if (this.props.value.location !== "") {
+      fetch(
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${
+          this.props.value.location
+        }&key=AIzaSyAI6yDH5gaOYwcbJorZZ3SNbCXF7IoczZ0`
+      )
+        .then(res => res.json())
+        .then(data => {
+          if (data.results.length !== 0) {
+            this.setState({
+              latitude: data.results[0].geometry.location.lat
+            });
+            this.setState({
+              longitude: data.results[0].geometry.location.lng
+            });
+          } else {
+          }
+        });
+    }
   };
 
   onGetLocationClick = getAddress => {
@@ -102,7 +103,7 @@ class BeerInfo extends Component {
                 ) : (
                   <img
                     className="beer-image-holder"
-                    src="/assets/tall.jpg"
+                    src={ImgPlaceHolder}
                     alt={beer.name}
                   />
                 )}
@@ -210,6 +211,11 @@ class BeerInfo extends Component {
                         lng: this.state.longitude
                       }}
                       name={"Your Location"}
+                      icon={{
+                        url: require("../../assets/pin.png"),
+
+                        scaledSize: { width: 50, height: 50 }
+                      }}
                     />
                     <InfoWindow
                       marker={this.state.activeMarker}
@@ -259,7 +265,7 @@ class BeerInfo extends Component {
                               <div>
                                 <h4>{this.state.selectedPlace.name}</h4>
                                 <a
-                                  href={`https://www.google.com/maps/place/${
+                                  href={`https://www.google.com/maps/dir/${
                                     this.state.selectedPlace.address
                                   }?hl=en`}
                                   target="_blank"
