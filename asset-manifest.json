@@ -1,7 +1,7 @@
 {
   "main.css": "/beaus/static/css/main.4d037ce6.chunk.css",
-  "main.js": "/beaus/static/js/main.98119947.chunk.js",
-  "main.js.map": "/beaus/static/js/main.98119947.chunk.js.map",
+  "main.js": "/beaus/static/js/main.aa8449c2.chunk.js",
+  "main.js.map": "/beaus/static/js/main.aa8449c2.chunk.js.map",
   "static/js/1.6f339837.chunk.js": "/beaus/static/js/1.6f339837.chunk.js",
   "static/js/1.6f339837.chunk.js.map": "/beaus/static/js/1.6f339837.chunk.js.map",
   "runtime~main.js": "/beaus/static/js/runtime~main.08d70b0b.js",
@@ -11,6 +11,6 @@
   "static/media/pin.png": "/beaus/static/media/pin.7656eb69.png",
   "static/media/logo.png": "/beaus/static/media/logo.a3eb77be.png",
   "index.html": "/beaus/index.html",
-  "precache-manifest.8bcd0ef60c48a66d42b9a8669ab8ecb8.js": "/beaus/precache-manifest.8bcd0ef60c48a66d42b9a8669ab8ecb8.js",
+  "precache-manifest.9e18cf1139300564afce6b579e69c945.js": "/beaus/precache-manifest.9e18cf1139300564afce6b579e69c945.js",
   "service-worker.js": "/beaus/service-worker.js"
 }
