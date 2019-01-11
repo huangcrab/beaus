@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/beaus/static/js/runtime~main.08d70b0b.js"
   },
   {
-    "revision": "f5298370e37c6eb71792",
-    "url": "/beaus/static/js/main.f5298370.chunk.js"
+    "revision": "c8190de0c36d59b8fb61",
+    "url": "/beaus/static/js/main.c8190de0.chunk.js"
   },
   {
     "revision": "ef491cf7f7805206ad3a",
     "url": "/beaus/static/js/1.ef491cf7.chunk.js"
   },
   {
-    "revision": "f5298370e37c6eb71792",
+    "revision": "c8190de0c36d59b8fb61",
     "url": "/beaus/static/css/main.32419979.chunk.css"
   },
   {
-    "revision": "9b9d0b9dfa24251a95622404d390ba39",
+    "revision": "76fb401ef229fb64590c0779537cbecf",
     "url": "/beaus/index.html"
   }
 ];
