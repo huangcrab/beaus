@@ -26,7 +26,7 @@ const Reducer = (state, action) => {
 export class Provider extends Component {
   state = {
     key:
-      "MDo4MGMwOTk4MC0xMDRhLTExZTktYmEzNi0zMzQ4ODcyMDk4NGI6VmtodmM0cEFISnpLbk9vY3RrSXpRMk5nQ3pUdThVOHB0UEFT",
+      "MDoxNWU4NTU4OC0xNTc0LTExZTktOTZjMS00M2JiZGZkYjUyYzg6Q1FIaEZNQ0x5ejROaEdMRnM4NXRaeFBrUDNadnVoRkttNFRB",
     key2: "AIzaSyAI6yDH5gaOYwcbJorZZ3SNbCXF7IoczZ0",
     beer: {},
     beers: [],
