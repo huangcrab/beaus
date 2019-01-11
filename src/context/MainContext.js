@@ -114,15 +114,17 @@ export class Provider extends Component {
     },
 
     getAddress: latlong => {
-      fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latlong}&key=${
-          this.state.key2
-        }`
-      )
-        .then(res => res.json())
-        .then(data => {
-          this.setState({ location: data.results[0].formatted_address });
-        });
+      if (latlong !== "") {
+        fetch(
+          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latlong}&key=${
+            this.state.key2
+          }`
+        )
+          .then(res => res.json())
+          .then(data => {
+            this.setState({ location: data.results[0].formatted_address });
+          });
+      }
     }
   };
 
