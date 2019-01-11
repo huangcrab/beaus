@@ -26,7 +26,7 @@ const Reducer = (state, action) => {
 export class Provider extends Component {
   state = {
     key:
-      "MDoxNWU4NTU4OC0xNTc0LTExZTktOTZjMS00M2JiZGZkYjUyYzg6Q1FIaEZNQ0x5ejROaEdMRnM4NXRaeFBrUDNadnVoRkttNFRB",
+      "MDo4ZWFkMmNjMC0xNTcyLTExZTktYWYyMi0wYjMwNzQ3M2ZiOTI6clNYV3F6UmFJWTFzRVdsaHdNOWV6enphZ092QkNyRmFLdXBD",
     key2: "AIzaSyAI6yDH5gaOYwcbJorZZ3SNbCXF7IoczZ0",
     beer: {},
     beers: [],
@@ -46,10 +46,15 @@ export class Provider extends Component {
       this.setState({ loading_stores: true });
       const headers = new Headers();
       headers.set("Authorization", `Token ${this.state.key}`);
-      fetch(`https://lcboapi.com/stores?product_id=${id}`, {
-        method: "GET",
-        headers: headers
-      })
+      fetch(
+        `https://lcboapi.com/stores?product_id=${id}&access_key=${
+          this.state.key
+        }`,
+        {
+          method: "GET",
+          headers: headers
+        }
+      )
         .then(res => res.json())
         .then(data => {
           this.setState({ stores: data.result });
@@ -62,10 +67,15 @@ export class Provider extends Component {
       this.setState({ loading_beers: true });
       const headers = new Headers();
       headers.set("Authorization", `Token ${this.state.key}`);
-      fetch(`https://lcboapi.com/products?per_page=50&q=beau's+beer`, {
-        method: "GET",
-        headers: headers
-      })
+      fetch(
+        `https://lcboapi.com/products?per_page=50&q=beau's+beer&access_key=${
+          this.state.key
+        }`,
+        {
+          method: "GET",
+          headers: headers
+        }
+      )
         .then(res => res.json())
         .then(data => {
           if (data.pager.total_pages > 1) {
@@ -76,7 +86,9 @@ export class Provider extends Component {
             for (let i = 2; i <= data.pager.total_pages; i++) {
               promiseChain.push(
                 fetch(
-                  `https://lcboapi.com/products?per_page=50&q=beau's+beer&page=${i}`,
+                  `https://lcboapi.com/products?per_page=50&q=beau's+beer&page=${i}&access_key=${
+                    this.state.key
+                  }`,
                   {
                     method: "GET",
                     headers: headers
