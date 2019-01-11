@@ -13,6 +13,11 @@ const Reducer = (state, action) => {
         ...state,
         beers: action.payload
       };
+    case "SET_LOCATION":
+      return {
+        ...state,
+        location: action.payload
+      };
     default:
       return state;
   }
@@ -22,9 +27,14 @@ export class Provider extends Component {
   state = {
     key:
       "MDo4MGMwOTk4MC0xMDRhLTExZTktYmEzNi0zMzQ4ODcyMDk4NGI6VmtodmM0cEFISnpLbk9vY3RrSXpRMk5nQ3pUdThVOHB0UEFT",
+    key2: "AIzaSyAI6yDH5gaOYwcbJorZZ3SNbCXF7IoczZ0",
     beer: {},
     beers: [],
     stores: [],
+    nearbyStores: [],
+    location: "",
+    location_lat: "",
+    location_long: "",
     error: {},
     loading_stores: false,
     loading_beers: false,
@@ -58,7 +68,6 @@ export class Provider extends Component {
       })
         .then(res => res.json())
         .then(data => {
-          console.log(data.result);
           if (data.pager.total_pages > 1) {
             const all_beers = [];
             all_beers.push(...data.result);
@@ -90,6 +99,18 @@ export class Provider extends Component {
           }
         })
         .catch(err => this.setState({ error: err }));
+    },
+
+    getAddress: latlong => {
+      fetch(
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latlong}&key=${
+          this.state.key2
+        }`
+      )
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ location: data.results[0].formatted_address });
+        });
     }
   };
 

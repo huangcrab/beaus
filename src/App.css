@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 
 h1,
@@ -15,11 +15,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Abril Fatface";
+  font-family: "Abril Fatface", cursive;
 }
 
 a {
   color: inherit;
+}
+
+a:hover {
+  color: var(--lcbo-brown);
 }
 
 .brown {
@@ -151,9 +155,11 @@ body {
 .beer-grid .card-body p {
   text-align: center;
 }
-.beer-card,
-.store-card {
+.beer-card {
   width: 13rem;
+}
+.store-card {
+  width: 100%;
 }
 .beer-info {
   height: 80vh;
@@ -206,4 +212,19 @@ body {
 
 .button:hover {
   transform: translatey(-0.5rem);
+}
+
+.modal-title {
+  color: var(--lcbo-brown);
+}
+
+.store-map {
+  padding: 0;
+}
+
+.map-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 80vh;
 }

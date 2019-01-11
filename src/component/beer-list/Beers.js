@@ -11,7 +11,10 @@ class Beers extends Component {
     const { loading_beers, beers } = this.props.value;
     return (
       <div>
-        <div className="title">Seasonal List</div>
+        <div className="title">
+          <h2>Seasonal List</h2>
+          <p className="" />
+        </div>
         <div className="beer-grid">
           {loading_beers
             ? "Loading"
@@ -23,7 +26,7 @@ class Beers extends Component {
                     ele.is_dead === false
                 )
                 .map(beer => {
-                  return <Beer beer={beer} />;
+                  return <Beer key={beer.id} beer={beer} />;
                 })}
         </div>
       </div>

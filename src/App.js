@@ -7,7 +7,7 @@ import BeerInfoContextWrap from "./component/beer-list/BeerInfoContextWrap";
 import Navbar from "./component/layout/Navbar";
 import Footer from "./component/layout/Footer";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { Provider } from "./context/MainContext";
 
